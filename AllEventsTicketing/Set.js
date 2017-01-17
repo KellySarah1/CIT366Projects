@@ -10,16 +10,18 @@ function Set() {
        }
 
        for (var i =0; i < listA.length; i++) { //for every element in listA
-	       var nextValue = listA[i]; // get next value in the list
+           var nextValue = listA[i]; // get next value in the list
 
 
-       //for every element inlistB
-        for (var j = 0; j < listB.length; j++) if (listB[j] === nextValue) { //this listB element equals nextValue
-            resultList.push(listB[j]); //add listB element to end of resultList
-            break; //break out of (exit) the listB inner loop
+           //for every element inlistB
+           for (var j = 0; j < listB.length; j++) {
+               if (listB[j] === nextValue) { //this listB element equals nextValue
+                   resultList.push(listB[j]); //add listB element to end of resultList
+                   break; //break out of (exit) the listB inner loop
 
-        } //end listB inner loop
-        } //end listA outer loop
+               } //end listB inner loop
+           } //end listA outer loop
+       }
 
        
 	   return resultList;
